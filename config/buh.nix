@@ -163,5 +163,35 @@
         # pickers.find_files.hidden = true;
       };
     };
+
+    indent-blankline = {
+      enable = true;
+      settings = {
+        exclude = {
+          buftypes = [
+            "terminal"
+            "quickfix"
+          ];
+          filetypes = [
+            ""
+            "checkhealth"
+            "help"
+            "lspinfo"
+            "TelescopePrompt"
+            "TelescopeResults"
+          ];
+        };
+        indent = {
+          char = "▏";
+          tab_char = "▏";
+        };
+        scope = {
+          enabled = true;
+          show_end = false;
+          show_exact_scope = true;
+          show_start = false;
+        };
+      };
+    };
   };
 }
