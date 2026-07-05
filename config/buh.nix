@@ -149,7 +149,15 @@
 
     telescope = {
       enable = true;
-      extensions.fzf-native.enable = true;
+      extensions.fzf-native = {
+        enable = true;
+        settings = {
+          fuzzy = true;
+          override_file_sorter = true;
+          override_generic_sorter = true;
+          case_mode = "smart_case";
+        };
+      };
 
       settings = {
         # pickers.find_files.hidden = true;
