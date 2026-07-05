@@ -1,3 +1,4 @@
+{ lib, pkgs, ... }:
 {
   opts = {
     # linenumbers
@@ -112,7 +113,7 @@
         enable = true;
         config = {
           nixpkgs.expr = "import <nixpkgs> {}";
-          formatting.command = [ "alejandra" ];
+          formatting.command = [ (lib.getExe pkgs.alejandra) ];
           options =
             let
               # wait how the fuck do i get the flake now
@@ -120,6 +121,7 @@
             in
             {
               nixos.expr = "${flake}.nixosConfigurations.mikko5.options";
+              # nixvim.expr = "${flake}.packages.";
             };
         };
       };
