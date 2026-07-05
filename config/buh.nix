@@ -32,6 +32,21 @@
 
   globals.mapleader = " ";
 
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>q";
+      action = ":q<CR>";
+      options.silent = false;
+    }
+    {
+      mode = "n";
+      key = "<leader>w";
+      action = ":w<CR>";
+      options.silent = false;
+    }
+  ];
+
   colorschemes.gruvbox.enable = true;
 
   lsp = {
