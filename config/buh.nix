@@ -20,6 +20,14 @@
     ignorecase = true;
     smartcase = true;
     incsearch = true;
+
+    # list chars
+    list = true;
+    listchars = {
+      tab = "➡ ";
+      trail = "°";
+      # space = ".";
+    };
   };
 
   globals.mapleader = " ";
