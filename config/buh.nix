@@ -105,6 +105,8 @@
   lsp = {
     inlayHints.enable = true;
 
+    # vimjoyer code editor video: https://youtu.be/M_zMoHlbZBY&t=245
+    # https://github.com/Ahwxorg/nixvim-config/blob/master/config/modules/plugins/lsp.nix
     servers = {
       nixd = {
         enable = true;
