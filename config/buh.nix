@@ -1,4 +1,29 @@
 {
+  opts = {
+    # linenumbers
+    number = true;
+    relativenumber = true;
+    wrap = false;
+
+    # tab settings
+    shiftwidth = 2;
+    tabstop = 2;
+    softtabstop = 2;
+    expandtab = true;
+    shiftround = true;
+    smartindent = true;
+    cursorline = true;
+    scrolloff = 10;
+    sidescrolloff = 5;
+
+    # search
+    ignorecase = true;
+    smartcase = true;
+    incsearch = true;
+  };
+
+  globals.mapleader = " ";
+
   colorschemes.gruvbox.enable = true;
 
   lsp = {
@@ -28,6 +53,9 @@
   };
 
   plugins = {
+    bufferline.enable = true;
+    web-devicons.enable = true;
+
     lspconfig.enable = true;
     lsp-format.enable = true;
     lsp-lines.enable = true;
