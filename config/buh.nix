@@ -43,6 +43,9 @@
       ];
     };
 
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      extensions.fzf-native.enable = true;
+    };
   };
 }
