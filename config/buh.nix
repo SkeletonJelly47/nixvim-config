@@ -33,6 +33,7 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # save & quit
     {
       mode = "n";
       key = "<leader>q";
@@ -44,6 +45,58 @@
       key = "<leader>w";
       action = ":w<CR>";
       options.silent = false;
+    }
+
+    # telescope
+    {
+      mode = "n";
+      key = "<leader>ff";
+      action = "<cmd>Telescope find_files<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<cmd>Telescope live_grep<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>fb";
+      action = "<cmd>Telescope buffers<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>fh";
+      action = "<cmd>Telescope help_tags<CR>";
+      options.silent = true;
+    }
+
+    # lsp
+    {
+      mode = "n";
+      key = "gr";
+      action = "<cmd>lua vim.lsp.buf.references()<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "K";
+      action = "<cmd>lua vim.lsp.buf.hover()<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>rn";
+      action = "<cmd>lua vim.lsp.buf.rename()<CR>";
+      options.silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>fm";
+      action = "<cmd>lua vim.lsp.buf.format()<CR>";
+      options.silent = true;
     }
   ];
 
@@ -99,7 +152,7 @@
       extensions.fzf-native.enable = true;
 
       settings = {
-        pickers.find_files.hidden = true;
+        # pickers.find_files.hidden = true;
       };
     };
   };
