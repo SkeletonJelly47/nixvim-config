@@ -50,7 +50,12 @@
 
       highlight-undo.enable = true;
       blink-indent.enable = true;
-      indent-blankline.enable = true;
+
+      indent-blankline = {
+        enable = true;
+        setupOpts.indent.char = "▏";
+        setupOpts.indent.tab_char = "▏";
+      };
     };
 
     statusline = {
