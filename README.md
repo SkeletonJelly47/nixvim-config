@@ -1,5 +1,8 @@
 # TODO
-- [ ] try NVF instead
-- [ ] fix format
-- [ ] auto format on save
-- [ ] fix nixd
+
+- [x] try NVF instead
+- [x] auto format on save
+- [ ] auto complete sources
+  - [ ] nixos options
+  - [ ] `nixpkgs`
+  - [ ] `nvf`
