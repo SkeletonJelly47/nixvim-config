@@ -48,6 +48,10 @@
       wrap = false;
       scrolloff = 10;
       sidescrolloff = 5;
+      list = true;
+      listchars = {
+        trail = "°";
+      };
     };
 
     visuals = {
