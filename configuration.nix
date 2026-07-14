@@ -42,6 +42,12 @@
       };
     };
 
+    opts = {
+      tabstop = 2;
+      shiftwidth = 2;
+      wrap = false;
+    };
+
     visuals = {
       nvim-scrollbar.enable = true;
       nvim-cursorline.enable = true;
