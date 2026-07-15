@@ -14,7 +14,21 @@
       # You may define your own LSP configurations using `vim.lsp.servers` in
       # nvf without ever needing lspconfig to do it. This will use the native
       # API provided by Neovim > 0.11
-      servers = {};
+      servers = {
+        "nixd" = {
+          enable = true;
+          cmd = ["nixd"];
+          root_markers = ["flake.nix" ".git"];
+
+          settings = {
+            nixd = {
+              nixpkgs = {
+                expr = "import <nixpkgs> { }";
+              };
+            };
+          };
+        };
+      };
     };
 
     debugger = {
@@ -33,9 +47,13 @@
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
-      nix.enable = true;
+      nix = {
+        lsp.servers = ["nixd"];
+      };
+
       markdown.enable = true;
       zig.enable = true;
+
       rust = {
         enable = true;
         extensions.crates-nvim.enable = true;
