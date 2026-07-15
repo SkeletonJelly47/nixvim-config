@@ -15,6 +15,7 @@
       # nvf without ever needing lspconfig to do it. This will use the native
       # API provided by Neovim > 0.11
       servers = {
+        # https://github.com/nix-community/nixd/blob/main/nixd/docs/configuration.md#where-to-place-the-configuration
         "nixd" = {
           enable = true;
           cmd = ["nixd"];
