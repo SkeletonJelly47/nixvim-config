@@ -22,6 +22,7 @@
 
           settings = {
             nixd = {
+              formatting.command = ["alejandra"];
               nixpkgs = {
                 expr = "import <nixpkgs> { }";
               };
